@@ -70,13 +70,13 @@ while True:
         h = 'low'
     else:
         h = 'high'
-'''
-    print(h)
-    print(t)
-    print(row)
-    print(z)
-    print(fa)
-'''
+
+    #print(h)
+    #print(t)
+    #print(row)
+    #print(z)
+    #print(fa)
+
     for n in range(0, len(name)):
         if farbe[n] == r:
             print(name[n] + " hat " + str(int(satz[n]) * 35) + " Coins gewonnen\n")
