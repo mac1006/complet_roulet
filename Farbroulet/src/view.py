@@ -1,5 +1,6 @@
 import turtle
 def circle1(r, c):
+    turtle.speed(0)
     turtle.color(c)
     turtle.right(90)
     turtle.penup()
@@ -15,6 +16,7 @@ def circle1(r, c):
 
 
 def circle2(r, c):
+    turtle.speed(0)
     turtle.color(c)
     turtle.right(90)
     turtle.penup()
@@ -35,6 +37,7 @@ def circle2(r, c):
 
 
 def circle3(r):
+    turtle.speed(0)
     turtle.color('black')
     turtle.right(90)
     turtle.penup()
@@ -48,5 +51,25 @@ def circle3(r):
         turtle.penup()
         turtle.circle(r, (360 / 37))
 
+    turtle.penup()
+    turtle.home()
+
+def circle4(r, c):
+    turtle.speed(0)
+    turtle.color(c)
+    turtle.right(90)
+    turtle.penup()
+    turtle.forward(r)
+    turtle.pendown()
+    turtle.left(90)
+    for i in range(37):
+        turtle.dot(7)
+        turtle.color('black')
+        turtle.right(90)
+        turtle.forward(30)
+        turtle.backward(30)
+        turtle.left(90)
+        turtle.color(c)
+        turtle.circle(r, (360 / 37))
     turtle.penup()
     turtle.home()
