@@ -1,6 +1,5 @@
 '''
 Created on 25.06.2020
-
 @author: mac_1006
 '''
 
