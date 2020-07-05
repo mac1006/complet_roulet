@@ -31,22 +31,16 @@ while True:
     for n in range(0, len(name)):
         farbe.append(input(name[n] + ', wähle eine Zahl von 1 bis 36 oder eine Farbe\nr=rot\ns=schwarz\n'
                                      'oder gerade/ungerade\ng = gerade\nu = ungerade\n'
-                                     'oder erste, zweite oder dritte Reihe\n1st = erste Reihe\n2nd = zweite Reihe\n3rd = dritte Reihe\n'
-                                     'oder drittel\n1-12 = erstes Drittel\n13-24 = zweites Drittel\n25-36 = drittes Drittel\n'
+                                     'oder erste, zweite oder dritte Reihe\n1st = erste Reihe\n2nd = zweite '
+                                     'Reihe\n3rd = dritte Reihe\n '
+                                     'oder drittel\n1-12 = erstes Drittel\n13-24 = zweites Drittel\n25-36 = drittes '
+                                     'Drittel\n '
                                      'oder hohe/niedrige Zahlen\nlow = niedrige Zahlen\nhigh = hohe Zahlen\n'))
 
     r = str(random.randint(0, 36))
     rotezahlen = ['1', '3', '5', '7', '9', '12', '14', '16', '18', '19', '21', '23', '25', '27', '30', '32', '34', '36']
     schwarzezahlen = ['2', '4', '6', '8', '10', '11', '13', '15', '17', '20', '22', '24', '26', '28', '29', '31', '33',
                       '35']
-    firstrow = ['1', '4', '7', '10', '13', '16', '19', '22', '25', '28', '31', '34']
-    secondrow = ['2', '5', '8', '11', '14', '17', '20', '23', '26', '29', '32', '35']
-    thirdrow = ['3', '6', '9', '12', '15', '18', '21', '24', '27', '30', '33', '36']
-
-    third1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
-    third2 = ['13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24']
-    third3 = ['25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36']
-
     print(r)
     if r in rotezahlen:
         fa = 'r'
@@ -58,16 +52,16 @@ while True:
     else:
         z = 'u'
 
-    if r in firstrow:
+    if r in range(1, 36, 3):
         row = '1st'
-    elif r in secondrow:
+    elif r in range(2, 36, 3):
         row = '2nd'
     else:
         row = '3rd'
 
-    if r in third1:
+    if r in range(1, 12):
         t = '1-12'
-    elif r in third2:
+    elif r in range(13, 24):
         t = '13-24'
     else:
         t = '25-36'
@@ -76,13 +70,13 @@ while True:
         h = 'low'
     else:
         h = 'high'
-
+'''
     print(h)
     print(t)
     print(row)
     print(z)
     print(fa)
-
+'''
     for n in range(0, len(name)):
         if farbe[n] == r:
             print(name[n] + " hat " + str(int(satz[n]) * 35) + " Coins gewonnen\n")
